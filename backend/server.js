@@ -6,31 +6,13 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// GET endpoint
+app.get('/api/messages', (req, res) => {
+  res.json({ message: 'Hello from backend' });
+});
+
 app.post("/", async (req, res) => {
-  const { name, email, message, createdAt } = req.body;
-
-  try {
-    // Log the message details
-    console.log("New message received:", {
-      name,
-      email, 
-      message,
-      createdAt
-    });
-
-    // Send success response
-    res.status(200).json({ 
-      success: true, 
-      message: "Message received successfully!"
-    });
-
-  } catch (error) {
-    console.error("Error processing message:", error);
-    res.status(500).json({
-      success: false,
-      message: "Failed to process message"
-    });
-  }
+  // ...existing code...
 });
 
 const PORT = process.env.PORT || 3000;
