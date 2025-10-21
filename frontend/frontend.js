@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     try {
-      const res = await fetch("http://localhost:3000/api/messages", {
+      const res = await fetch("https://k-portfolio-backend.onrender.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -31,3 +31,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
