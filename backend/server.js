@@ -1,3 +1,5 @@
+import express from "espress";
+import cors from 'cors';
 const express = require('express');
 const cors = require('cors');
 const app = express();
@@ -9,10 +11,6 @@ app.use(express.json());
 // GET endpoint
 app.get('/api/messages', (req, res) => {
   res.json({ message: 'Hello from backend' });
-});
-
-app.post("/", async (req, res) => {
-  // ...existing code...
 });
 
 app.post("/", async (req, res) => {
